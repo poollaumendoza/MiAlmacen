@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiAlmacen.DataLayer", "MiAl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiAlmacen.BusinessLayer", "MiAlmacen.BusinessLayer\MiAlmacen.BusinessLayer.csproj", "{79DD5A02-A320-4749-B448-ACE71C962FB7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiAlmacen.AdminLayer", "MiAlmacen.AdminLayer\MiAlmacen.AdminLayer.csproj", "{45B7ED93-0427-4091-A9A8-408D4C81BED3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiAlmacen.Desktop", "MiAlmacen.Desktop\MiAlmacen.Desktop.csproj", "{8ABFE948-6E5D-4650-854E-84B39B54A341}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{79DD5A02-A320-4749-B448-ACE71C962FB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{79DD5A02-A320-4749-B448-ACE71C962FB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{79DD5A02-A320-4749-B448-ACE71C962FB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45B7ED93-0427-4091-A9A8-408D4C81BED3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45B7ED93-0427-4091-A9A8-408D4C81BED3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45B7ED93-0427-4091-A9A8-408D4C81BED3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45B7ED93-0427-4091-A9A8-408D4C81BED3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8ABFE948-6E5D-4650-854E-84B39B54A341}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8ABFE948-6E5D-4650-854E-84B39B54A341}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8ABFE948-6E5D-4650-854E-84B39B54A341}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8ABFE948-6E5D-4650-854E-84B39B54A341}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -6,52 +6,56 @@ using System.Threading.Tasks;
 
 namespace MiAlmacen.BusinessLayer
 {
-    class PickingDetalle
+    public class PickingDetalle
     {
-        DataLayer.ArticuloCodigo dArticuloCodigo = new DataLayer.ArticuloCodigo();
+        DataLayer.PickingDetalle dPickingDetalle = new DataLayer.PickingDetalle();
 
-        public List<EntityLayer.ArticuloCodigo> Listar()
+        public List<EntityLayer.PickingDetalle> Listar()
         {
-            return dArticuloCodigo.Listar();
+            return dPickingDetalle.Listar();
         }
 
-        public int Registrar(EntityLayer.ArticuloCodigo obj, out string Mensaje)
+        public int Registrar(EntityLayer.PickingDetalle obj, out string Mensaje)
         {
             Mensaje = string.Empty;
 
-            if (obj.oArticulo.IdArticulo == 0)
+            if (obj.oPicking.IdPicking == 0)
+                Mensaje = "Debe seleccionar un picking";
+            else if (obj.oArticulo.IdArticulo == 0)
                 Mensaje = "Debe seleccionar un articulo";
-            else if (string.IsNullOrEmpty(obj.NombreCodigo) || string.IsNullOrWhiteSpace(obj.NombreCodigo))
-                Mensaje = "El código del articulo no puede quedar vacío";
+            else if (obj.Cantidad == 0)
+                Mensaje = "La cantidad no puede ser 0";
             else if (obj.oEstado.IdEstado == 0)
                 Mensaje = "Debe seleccionar un estado";
 
             if (string.IsNullOrEmpty(Mensaje))
-                return dArticuloCodigo.Registrar(obj, out Mensaje);
+                return dPickingDetalle.Registrar(obj, out Mensaje);
             else
                 return 0;
         }
 
-        public bool Editar(EntityLayer.ArticuloCodigo obj, out string Mensaje)
+        public bool Editar(EntityLayer.PickingDetalle obj, out string Mensaje)
         {
             Mensaje = string.Empty;
 
-            if (obj.oArticulo.IdArticulo == 0)
+            if (obj.oPicking.IdPicking == 0)
+                Mensaje = "Debe seleccionar un picking";
+            else if (obj.oArticulo.IdArticulo == 0)
                 Mensaje = "Debe seleccionar un articulo";
-            else if (string.IsNullOrEmpty(obj.NombreCodigo) || string.IsNullOrWhiteSpace(obj.NombreCodigo))
-                Mensaje = "El código del articulo no puede quedar vacío";
+            else if (obj.Cantidad == 0)
+                Mensaje = "La cantidad no puede ser 0";
             else if (obj.oEstado.IdEstado == 0)
                 Mensaje = "Debe seleccionar un estado";
 
             if (string.IsNullOrEmpty(Mensaje))
-                return dArticuloCodigo.Editar(obj, out Mensaje);
+                return dPickingDetalle.Editar(obj, out Mensaje);
             else
                 return false;
         }
 
         public bool Eliminar(int id, out string Mensaje)
         {
-            return dArticuloCodigo.Eliminar(id, out Mensaje);
+            return dPickingDetalle.Eliminar(id, out Mensaje);
         }
     }
 }
